@@ -14,8 +14,8 @@ class Car {
         this.model=model
         this.year=year
     }
-    getCarAge():string{
-        return `The Car is ${new Date().getFullYear()-this.year} years old`
+    getCarAge():number{
+        return (new Date().getFullYear()-this.year)
     }
 
 }
