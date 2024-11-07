@@ -7,7 +7,8 @@ if the parameter is string then GF doesn't like to reveal her age. Otherwise she
 
 In this scenario, we would write a function like this and call the function afterwards 
 
-``` function getGFAge(age){
+``` 
+function getGFAge(age){
     if (age typeof ==='number'){
         return `She is just ${number-10} years old! and Honest!`
     }
