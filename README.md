@@ -24,13 +24,14 @@ takes either a string or number input such as
 
 ``` type Age = number| string ```
 and use it in our function as such...
-    function getGFAge(age:Age)```
+   ``` function getGFAge(age:Age)```
 
 since we annotated the type of parameter our function can accept, we have limited the type of arguments that can be supplied by the user meaning our function will not accept any value other than a string or a number.
 
 We can further simplify the function like this ...
 
-``` function getGFAge(age:Age) :Age{
+``` 
+function getGFAge(age:Age) :Age{
     return typeof age ==='number'? `She is just ${age-10} years old! and Honest!`:"I was born few weeks ago!"
 } 
 ```
