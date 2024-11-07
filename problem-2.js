@@ -3,4 +3,4 @@
 var removeDuplicates = function (numberArray) {
     return numberArray.filter(function (item, index, inputArray) { return inputArray.indexOf(item) == index; });
 };
-console.log(removeDuplicates([2, 3, 4, 5, 5, 5, 5, 6, 7, 6]));
+removeDuplicates([1, 2, 2, 3, 4, 4, 5]);

@@ -1,40 +1,26 @@
 //Define a union type Circle and Rectangle, where each type has a unique shape property. 
 //Create a function calculateShapeArea that uses type guards to calculate the area based on the shape type.
 
-class Shape {
-    shape:string;
-    constructor(shape:string){
-        this.shape=shape
-    }
+
+type Circle = {
+    shape:'circle',
+    radius:number
 }
-class Circle extends Shape {
-    radius:number;
-    constructor(shape:string, radius:number){
-        super(shape)
-        this.radius = radius
-    }
-}
-class Rectangle extends Shape {
-    width:number;
-    height:number;
-    constructor(shape:string, width:number, height:number){
-        super(shape)
-        this.width = width
-        this.height = height
-    }
+type Rectangle =  {
+    shape:'rectangle'
+    width:number,
+    height:number,
 }
 
-type MixedShape = Rectangle | Circle
+type Shape = Rectangle | Circle
 
-const calculateShapeArea= (shape:MixedShape):number=>{
-    if (shape instanceof Circle){
-        return Math.PI* Math.pow(shape.radius,2)
-    }
-    else if(shape instanceof Rectangle){
-        return shape.height*shape.width
-    }
-    return 0
+const calculateShapeArea= (shape:Shape):number=>{
+    return shape.shape=='circle'? parseFloat((Math.PI*Math.pow(shape.radius,2)).toFixed(2)): parseFloat((shape.height*shape.width).toFixed(2))
 }
 
-console.log( calculateShapeArea(new Rectangle('rectangle',10,20)))
+console.log( calculateShapeArea( {
+    shape: "rectangle",
+    width: 4,
+    height: 6,
+  }))
 

@@ -1,25 +1,20 @@
-/*
-Define an interface Profile with properties name, age, and email. Create a function updateProfile that 
-accepts an object of type Profile and an object of type Partial representing the updates. 
-The function should return the updated profile.
-*/
 {
+    /*
+    Define an interface Profile with properties name, age, and email. Create a function updateProfile that 
+    accepts an object of type Profile and an object of type Partial representing the updates. 
+    The function should return the updated profile.
+    */
 
-interface Profile{
-    name:string,
-    age:number,
-    email:string
-}
+    interface Profile {
+        name: string,
+        age: number,
+        email: string
+    }
 
-const profile:Profile = {
-    name:'john',
-    age:20,
-    email:'bla'
-}
-const updateProfile =(profile:Profile, partial:Partial<Profile> )=>{
-     return { ...profile, ...partial };
-}
-
-
-console.log( updateProfile(profile,{age:70}))
+    const updateProfile = (profile: Profile, partial: Partial<Profile>) => {
+        return { ...profile, ...partial };
+    }
+    // Sample Input :
+    const myProfile = { name: "Alice", age: 25, email: "alice@example.com" };
+    console.log(updateProfile(myProfile, { email: 'johnnalice@example.com' }))
 }

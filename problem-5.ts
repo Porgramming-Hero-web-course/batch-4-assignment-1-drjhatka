@@ -8,15 +8,5 @@ const getProperty = <T,K extends keyof T>(obj:T, key:K ):T[K]=>{
     return obj[key]
 }
 
-type UserPrototype = {
-    name:string,
-    userId:number,
-    email:string
-}
-
-const user1 :UserPrototype = {
-    name:'John',
-    userId:5555,
-    email:'john_dev@gmail.com'
-}
-console.log(getProperty(user1,'name'))
+const person = { name: "Alice", age: 30 };
+console.log(getProperty(person, "age"));

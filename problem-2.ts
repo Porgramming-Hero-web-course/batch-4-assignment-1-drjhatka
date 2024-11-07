@@ -4,4 +4,4 @@
 const removeDuplicates= (numberArray:number[]):number[]=>{
     return numberArray.filter((item, index, inputArray)=>inputArray.indexOf(item)==index)
 }
-console.log(removeDuplicates([2,3,4,5,5,5,5,6,7,6]))
+console.log( removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
