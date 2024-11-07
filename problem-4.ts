@@ -24,9 +24,9 @@ class Rectangle extends Shape {
     }
 }
 
-type Mixed = Rectangle | Circle
+type MixedShape = Rectangle | Circle
 
-const calculateShapeArea= (shape:Mixed):number=>{
+const calculateShapeArea= (shape:MixedShape):number=>{
     if (shape instanceof Circle){
         return Math.PI* Math.pow(shape.radius,2)
     }
