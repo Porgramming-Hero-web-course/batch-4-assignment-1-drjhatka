@@ -2,7 +2,7 @@
 
 
 ## Union Types
-We want to write a function called getGFAge() that takes a parameter of either number or string type. 
+Lets say We want to write a function called getGFAge() that takes a parameter of either number or string type. 
 if the parameter is string then GF doesn't like to reveal her age. Otherwise she is honest about her age.
 
 In this scenario, we would write a function like this and call the function afterwards 

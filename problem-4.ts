@@ -3,24 +3,24 @@
 
 
 type Circle = {
-    shape:'circle',
-    radius:number
+    shape: 'circle',
+    radius: number
 }
-type Rectangle =  {
-    shape:'rectangle'
-    width:number,
-    height:number,
+type Rectangle = {
+    shape: 'rectangle'
+    width: number,
+    height: number,
 }
 
 type Shape = Rectangle | Circle
 
-const calculateShapeArea= (shape:Shape):number=>{
-    return shape.shape=='circle'? parseFloat((Math.PI*Math.pow(shape.radius,2)).toFixed(2)): parseFloat((shape.height*shape.width).toFixed(2))
+const calculateShapeArea = (shape: Shape): number => {
+    return "shape" in shape && shape.shape == 'circle' ? parseFloat((Math.PI * Math.pow(shape.radius, 2)).toFixed(2)) : parseFloat((shape.height * shape.width).toFixed(2))
 }
 
-console.log( calculateShapeArea( {
+console.log(calculateShapeArea({
     shape: "rectangle",
     width: 4,
     height: 6,
-  }))
+}))
 
